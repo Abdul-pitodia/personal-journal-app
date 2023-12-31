@@ -18,7 +18,7 @@ The Personal Journal App is a simple memory journaling App that allows users to 
 The personal journal app has support for login and logout to maintain privacy of user memories. For starter, a new user can click on the sign up tab to create its credentials and get started with the application.
 The application has support for tags to add a tag to the memory as well. Users can create and delete tags. 
 
-## <a>**2. Running the Application locally**</a>
+## <a>**2. Running the application**</a>
 
 ### a. Prerequisites
 The application is built on Java, Spring boot and Angular, Typescript for frontend. The requirements are as follows
