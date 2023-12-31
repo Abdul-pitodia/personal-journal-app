@@ -1,0 +1,23 @@
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 mb-4" *ngIf="userLoggedIn">
+    <a class="navbar-brand ms-3" (click)="navigate('/home')">Journal App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <button class="nav-link" (click)="navigate('/home')">Home</button>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigate('/tags')">Tags</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="logout('/login')">Logout</a>
+        </li>
+      </ul>
+  </nav>
+
+
+<div class="container-lg bg-light">
+  <router-outlet></router-outlet>
+</div> 

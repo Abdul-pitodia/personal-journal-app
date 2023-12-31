@@ -1,0 +1,21 @@
+<div *ngIf="!isUserLoggedIn">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 mb-4">
+  <span class="navbar-brand ms-3">Journal App</span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" (click)="navigate('signup')">Sign Up</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" (click)="navigate('/')">Login</a>
+      </li>
+    </ul>
+</nav>
+
+
+<div class="container-lg bg-light">
+  <router-outlet></router-outlet>
+</div> 
+</div>

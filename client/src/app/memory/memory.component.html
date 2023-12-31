@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-md-12 d-flex justify-content-start">
+      <button class="btn btn-primary mb-3" role="button" (click)="createMemory()">Create New Memory</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="list-group">
+        <app-memory-item (selectMemoryEvent)="receiveSelectedMemory($event)" [data]="mem" *ngFor="let mem of memories"></app-memory-item>
+      </div>
+    </div>
+    <div class="col-md-8 d-flex justify-content-center align-items-center">
+      <app-create-memory *ngIf="createButtonClicked" [formRef]="myForm" [formAction]="formAction"></app-create-memory>
+      <app-memory-details (editMemoryEvent)="updateMemory()"  (removeMemoryEvent)="deleteMemory($event)" *ngIf="!createButtonClicked" [selectedMemory]="selectedMemory"></app-memory-details>
+    </div>
+</div>

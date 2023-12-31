@@ -1,0 +1,10 @@
+<a class="list-group-item list-group-item-action" (click)="emitMemory()">
+    <div class="d-flex justify-content-between">
+      <h5 class="mb-1">{{ data.title }}</h5>
+      <small>{{ data.date }}</small>
+    </div>
+    <p class="mb-1">{{ data.content }}</p>
+    <div>
+      <span class="badge bg-dark mx-1" *ngFor="let tag of data.tags">{{ tag.tagName }}</span>
+    </div>
+</a>

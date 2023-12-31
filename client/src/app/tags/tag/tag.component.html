@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-12 d-flex justify-content-start">
+
+            <form action="" [formGroup]="tagForm" (ngSubmit)="createTag()">
+                <div class="d-flex justify-content-center align-items-center">
+                <input type="text" name="" id="" class="form-control my-4 py-2 mx-4" placeholder="Create Tag" formControlName="tagName" />
+                <button type="submit" class="btn btn-dark mx-2" style="height: 3rem;">Create</button>
+            </div>
+            </form>
+
+    </div>
+
+    <div class="list-group">
+        <div class="d-flex justify-content-between" class="list-group-item" *ngFor="let tag of savedTags">
+                <span class="my-2">{{ tag.tagName }}</span>
+                <button class="btn btn-close my-2" (click)="deleteTag(tag)"></button>
+        </div>
+    </div>
+</div>
