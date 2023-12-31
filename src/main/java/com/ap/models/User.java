@@ -24,5 +24,7 @@ public class User {
 
     private List<Memory> memories;
 
+    private List<Tag> tags;
+
     private String password;
 }

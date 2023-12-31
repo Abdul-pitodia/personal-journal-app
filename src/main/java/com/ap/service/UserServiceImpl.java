@@ -28,6 +28,7 @@ public class UserServiceImpl {
         Optional<User> userOptional = userRepository.findByUserName(user.getUserName());
         if (userOptional.isPresent()) throw new UserAlreadyPresentException(HttpStatus.BAD_REQUEST, "User with same name exists");
         user.setMemories(new ArrayList<>());
+        user.setTags(new ArrayList<>());
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         return userRepository.save(user);
     }

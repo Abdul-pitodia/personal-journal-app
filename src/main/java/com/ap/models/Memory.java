@@ -20,7 +20,6 @@ public class Memory {
 
     private String media;
 
-    @DBRef
     private List<Tag> tags;
 
     private String date;

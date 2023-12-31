@@ -10,14 +10,13 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
-@Document("tags")
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 public class Tag {
 
-    @Id
     private String id;
 
     private String tagName;
