@@ -1,0 +1,41 @@
+<div class="card" *ngIf="!hideForm">
+    <div class="my-2 card-tilte d-flex justify-content-center">
+    <h4>Create Memory</h4>
+</div>
+
+<div class="card-body" *ngIf="!hideForm">
+    <form *ngIf="formRef" [formGroup]="formRef" (ngSubmit)="onSubmit()">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div class="d-flex justify-content-center align-items-center mb-2">
+                        <label class="me-5" for="title">Title</label>
+                        <input type="text" id="title" formControlName="title">
+                    </div>
+                </li>
+                <li class="list-group-item mb-2">
+                    <label class="me-5" for="content">Write about your memory..</label>
+                    <input class="w-100" style="height: 5rem;"type="text" id="content" formControlName="content">
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex justify-content-center align-items-center mb-2">
+                        <h5 class="me-4">Select tags</h5>
+                        <div *ngFor="let tag of savedTags" class="me-2">
+                            <label>
+                            <input type="checkbox" [value]="tag.tagName" (change)="addTag($event, tag)" [checked]="isChecked(tag)">
+                            {{ tag.tagName }}
+                            </label>
+                        </div>
+                    
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex justify-content-center align-items-center mb-2">
+                        <label class="me-5" for="media">Add URL for image</label>
+                        <input type="text" id="media" formControlName="media">
+                    </div>
+                </li>
+                <button class="btn btn-dark" type="submit" [disabled]="formRef.invalid">{{ formAction === "create" ? "Submit" : "Update"}}</button>
+            </ul>
+        </form>
+    </div>
+</div>
