@@ -1,0 +1,29 @@
+<div class="card" style="width: 60%; min-width: 30rem;"  *ngIf="selectedMemory">
+    <img [src]="selectedMemory.media" class="card-img-top">
+    <div class="card-header">
+        {{ selectedMemory.title }}
+    </div>
+
+    <div class="card-body">
+        <h5 class="card-title">
+            {{ selectedMemory.date }}
+        </h5>
+        <p class="card-text">
+            {{ selectedMemory.content }}
+        </p>
+        <div>
+          <h5>Tags</h5>
+          <span class="badge bg-dark mb-2 mx-2" *ngFor="let tag of selectedMemory.tags">{{ tag.tagName }}</span>
+        </div>
+
+    <div class="d-flex justify-content-start">
+        <button type="button" class="btn btn-primary mx-2" (click)="editMemory()">
+          <i class="fas fa-bookmark"></i>Edit
+        </button>
+        
+        <button type="button" class="btn btn-danger mx-2" (click)="removeMemory()">
+          <i class="fas fa-trash-alt"></i> Delete
+        </button>
+      </div>
+    </div>
+</div>
