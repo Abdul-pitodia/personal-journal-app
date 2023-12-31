@@ -1,5 +1,5 @@
 # **Personal Journal App**
-The Personal Journal App is a simple memory journaling App that allows users to record moments about their current day and write something memorable about them. It has the ability to add tags so that users can remember what exactly the moment or memory was about. It also has support to add images (URL for now) to add some images.
+The Personal Journal App is a simple memory journaling App that allows users to record moments about their current day and write something memorable about them. It has the ability to add tags so that users can remember what exactly the moment or memory was about. It also has support to add images (URL for now) to add some images. 
 
 <p align="center">
     <a href="https://personal-journal-app.vercel.app/login">
