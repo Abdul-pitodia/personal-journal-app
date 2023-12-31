@@ -3,7 +3,7 @@ The Personal Journal App is a simple memory journaling App that allows users to 
 
 <p align="center">
     <a href="https://personal-journal-app.vercel.app/login">
-        <img src = "demo-gif/demo.gif">
+        <img src = "Animation.gif">
     </a>
 </p>
 
