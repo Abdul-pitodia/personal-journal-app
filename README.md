@@ -38,9 +38,14 @@ For SSL to work locally please ensure that you have created a self-signed certif
 Dependencies will automatically be taken care of as the `pom.xml` file has all the required dependencies.
 CORS configuration can be done under `config` package and `Security-Config` file
 
-### c. Configuring the frontned
+### c. Configuring the frontend
 The frontend is built on Angular and Typescript, and it has a configuration file called `config.ts` present in `assets` folder 
 Here you can define the local backend URL and that will be used throughout the application to communicate with the APIs
+You can run the angular application locally by 
+```
+npm install
+ng serve
+```
 
 ### d. Configuring the database
 The application is using MongoDB for its data storage, and the connection URI must be mentioned in the `properties` file of the active profile being used by spring boot.
