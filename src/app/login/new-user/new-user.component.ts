@@ -26,7 +26,7 @@ export class NewUserComponent implements OnInit{
     if (!this.signupForm.valid) return;
     
     this.auth.signUp(this.signupForm.value).subscribe((data) => {
-      this.signupForm.reset();
+      this.signupForm.reset(); 
     })
   }
 
