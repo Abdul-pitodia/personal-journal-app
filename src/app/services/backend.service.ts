@@ -57,20 +57,20 @@ export class BackendService {
   }
 
   getAvailableTags(): Observable<ResponseModel> {
-    return this.http.get<ResponseModel>(`${this.apiUrl}tags/fetch`).pipe(
+    return this.http.get<ResponseModel>(`${this.apiUrl}tags/${this.userId}/fetch`).pipe(
       catchError(this.handleError)
     );
   }
 
   
   createTag(tagName: string): Observable<ResponseModel> {
-    return this.http.get<ResponseModel>(`${this.apiUrl}tags/create/${tagName}`).pipe(
+    return this.http.get<ResponseModel>(`${this.apiUrl}tags/create/${this.userId}/${tagName}`).pipe(
       catchError(this.handleError)
     );
   }
 
   deleteTag(tag: Tag): Observable<ResponseModel> {
-    return this.http.delete<ResponseModel>(`${this.apiUrl}tags/delete/${tag.id}`).pipe(
+    return this.http.delete<ResponseModel>(`${this.apiUrl}tags/delete/${this.userId}/${tag.id}`).pipe(
       catchError(this.handleError)
     );
   }
