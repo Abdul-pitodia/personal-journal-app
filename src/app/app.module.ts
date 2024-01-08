@@ -21,6 +21,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { ErrorComponent } from './errors/error/error.component';
 import { AuthGuard } from './guards/auth.guard';
 import { TagComponent } from './tags/tag/tag.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 export function initializeApp(envService: EnvironmentService) {
   return () => envService.initializeEnv();
@@ -45,7 +47,9 @@ export function initializeApp(envService: EnvironmentService) {
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-
+    BrowserAnimationsModule,
+    MatSnackBarModule,
+    
   ],
   providers: [    BackendService,
     SharedService,
